@@ -11,6 +11,7 @@
       <li>
         <statOffsets>
           <MoveSpeed>0.50</MoveSpeed>
+          <CaravanBonusSpeedFactor>1.00</CaravanBonusSpeedFactor>
           <MassCapacity>100</MassCapacity>
         </statOffsets>
       </li>
