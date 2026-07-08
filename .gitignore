@@ -9,3 +9,8 @@ Thumbs.db
 
 # RimWorld dev artifacts
 */Assemblies/*.pdb
+
+# C# build artifacts
+**/obj/
+**/bin/
+*.pdb
