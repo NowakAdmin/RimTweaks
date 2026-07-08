@@ -12,9 +12,12 @@
 -->
 <Patch>
 
-  <!-- Change vanilla Autodoor thingClass to VEF's lockable variant -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="Autodoor"]/thingClass</xpath>
+  <!--
+    Autodoor inherits thingClass from DoorBase — it has no own node to Replace.
+    We Add thingClass directly onto Autodoor, which overrides the inherited value.
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Autodoor"]</xpath>
     <value>
       <thingClass>VEF.Buildings.Building_AutoDoorLockable</thingClass>
     </value>
