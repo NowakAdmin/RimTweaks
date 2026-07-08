@@ -1,0 +1,10 @@
+E:\Claude\RimWorld\RimTweaks\Source\RimTweaks\obj\Release\RimTweaks.csproj.AssemblyReference.cache
+E:\Claude\RimWorld\RimTweaks\Source\RimTweaks\obj\Release\RimTweaks.GeneratedMSBuildEditorConfig.editorconfig
+E:\Claude\RimWorld\RimTweaks\Source\RimTweaks\obj\Release\RimTweaks.AssemblyInfoInputs.cache
+E:\Claude\RimWorld\RimTweaks\Source\RimTweaks\obj\Release\RimTweaks.AssemblyInfo.cs
+E:\Claude\RimWorld\RimTweaks\Source\RimTweaks\obj\Release\RimTweaks.csproj.CoreCompileInputs.cache
+E:\Claude\RimWorld\RimTweaks\Source\RimTweaks\obj\Release\RimTweaks.sourcelink.json
+E:\Claude\RimWorld\RimTweaks\Assemblies\RimTweaks.dll
+E:\Claude\RimWorld\RimTweaks\Assemblies\RimTweaks.pdb
+E:\Claude\RimWorld\RimTweaks\Source\RimTweaks\obj\Release\RimTweaks.dll
+E:\Claude\RimWorld\RimTweaks\Source\RimTweaks\obj\Release\RimTweaks.pdb

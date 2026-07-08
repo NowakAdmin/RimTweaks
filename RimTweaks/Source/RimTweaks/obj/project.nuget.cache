@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "FR4H8JqvMm0=",
+  "success": true,
+  "projectFilePath": "E:\\Claude\\RimWorld\\RimTweaks\\Source\\RimTweaks\\RimTweaks.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NoAd\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\NoAd\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.3\\microsoft.netframework.referenceassemblies.net472.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>NOAD_AdvancedAutodoor</defName>
+    <label>advanced autodoor</label>
+    <description>Improved motor and power controller designs reduce autodoor energy consumption by 50%.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Autodoors</li>
+    </prerequisites>
+    <!-- Position it just to the right of vanilla Autodoors node (6.00, 0.30) -->
+    <researchViewX>7.00</researchViewX>
+    <researchViewY>0.30</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>
