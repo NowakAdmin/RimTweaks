@@ -9,6 +9,21 @@
   </supportedVersions>
   <description>
     Personal compilation mod — cherry-picked features from various mods to avoid installing large mods for a single mechanic.
-    No external dependencies required unless a specific feature states otherwise.
+
+    Features:
+    - Vanilla Autodoor gets door lock policy (requires VEF): Default / Everyone / Only colonists and animals / Only colonists, animals and friendlies / Only drafted
   </description>
+
+  <modDependencies>
+    <li>
+      <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+      <displayName>Vanilla Expanded Framework</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+
+  <loadAfter>
+    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+  </loadAfter>
+
 </ModMetaData>

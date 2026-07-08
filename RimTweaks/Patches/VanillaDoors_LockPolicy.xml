@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Adds door lock policy (from VEF) to vanilla Autodoor.
+  Requires: Vanilla Expanded Framework (OskarPotocki.VanillaFactionsExpanded.Core)
+
+  Lock policy options (shown as right-click gizmo on the door):
+    Default                          — vanilla AI behavior
+    Everyone                         — all pawns pass freely
+    Only colonists and animals       — blocks visitors/hostiles
+    Only colonists, animals and friendlies
+    Only drafted                     — blocks everyone except drafted colonists
+-->
+<Patch>
+
+  <!-- Change vanilla Autodoor thingClass to VEF's lockable variant -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Autodoor"]/thingClass</xpath>
+    <value>
+      <thingClass>VEF.Buildings.Building_AutoDoorLockable</thingClass>
+    </value>
+  </Operation>
+
+</Patch>

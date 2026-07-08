@@ -5,7 +5,7 @@ Personal compilation mod. Adds cherry-picked features from various mods to avoid
 ## Structure
 
 ```
-NoAdCustomMod/
+RimTweaks/
 ├── About/          — mod metadata (About.xml)
 ├── Defs/
 │   ├── ThingDefs_Items/      — items, resources, weapons, apparel
@@ -22,6 +22,19 @@ NoAdCustomMod/
 
 All defNames use the prefix `NOAD_` to avoid conflicts.
 
+## Dependencies
+
+- **Vanilla Expanded Framework** (VEF) — required for door lock policy
+
 ## Features
 
-<!-- List features here as they are added -->
+### Door Lock Policy on vanilla Autodoor
+`Patches/VanillaDoors_LockPolicy.xml`
+
+XPath patch that changes vanilla `Autodoor` thingClass to `VEF.Buildings.Building_AutoDoorLockable`.
+Right-click the door in-game to cycle through lock policies:
+- **Default** — vanilla AI behavior
+- **Everyone** — all pawns pass freely
+- **Only colonists and animals** — blocks visitors/hostiles
+- **Only colonists, animals and friendlies**
+- **Only drafted** — blocks everyone except drafted colonists
