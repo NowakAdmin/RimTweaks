@@ -1,42 +1,25 @@
-using RimWorld;
 using System.Linq;
+using HarmonyLib;
+using RimWorld;
 using Verse;
 
-namespace RimTweaks
+namespace RimTweaks.Patches
 {
-    /// <summary>
-    /// Finds every ThingDef that accepts ToolCabinet as a facility and adds
-    /// NOAD_ProductionServer to that same list. Runs at startup after all Defs are loaded,
-    /// covering both vanilla and mod workbenches automatically.
-    /// </summary>
-    public static class ServerFacilityLinker
+    [HarmonyPatch(typeof(CompAffectedByFacilities), "CanPotentiallyLinkTo_Static")]
+    public static class Patch_ServerLinkAllToolCabinetBenches
     {
-        public static void LinkToAllToolCabinetBenches()
+        static void Postfix(ThingDef facilityDef, ThingDef potentialBuildingDef, ref bool __result)
         {
-            var serverDef = DefDatabase<ThingDef>.GetNamedSilentFail("NOAD_ProductionServer");
-            if (serverDef == null)
-            {
-                Log.Error("[RimTweaks] NOAD_ProductionServer def not found — skipping facility linking.");
-                return;
-            }
+            if (__result) return;
+            if (facilityDef?.defName != "NOAD_ProductionServer") return;
 
-            int count = 0;
-            foreach (var def in DefDatabase<ThingDef>.AllDefsListForReading)
-            {
-                var affectedComp = def.comps?
-                    .OfType<CompProperties_AffectedByFacilities>()
-                    .FirstOrDefault();
+            var affectedProps = potentialBuildingDef?.comps?
+                .OfType<CompProperties_AffectedByFacilities>()
+                .FirstOrDefault();
 
-                if (affectedComp == null) continue;
-                if (!affectedComp.linkableFacilities.Contains(serverDef) &&
-                    affectedComp.linkableFacilities.Any(f => f?.defName == "ToolCabinet"))
-                {
-                    affectedComp.linkableFacilities.Add(serverDef);
-                    count++;
-                }
-            }
+            if (affectedProps == null) return;
 
-            Log.Message($"[RimTweaks] ProductionServer linked to {count} workbench(es).");
+            __result = affectedProps.linkableFacilities.Any(f => f?.defName == "ToolCabinet");
         }
     }
 }

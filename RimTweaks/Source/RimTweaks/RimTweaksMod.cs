@@ -11,8 +11,6 @@ namespace RimTweaks
             var harmony = new Harmony("NoAd.RimTweaks");
             harmony.PatchAll();
             Log.Message("[RimTweaks] Harmony patches applied.");
-
-            ServerFacilityLinker.LinkToAllToolCabinetBenches();
         }
     }
 }
