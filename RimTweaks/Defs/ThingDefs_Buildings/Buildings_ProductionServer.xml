@@ -40,16 +40,6 @@
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>100</basePowerConsumption>
-      </li>
-      <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Breakdownable"/>
-      <li Class="CompProperties_Glower">
-        <glowRadius>3</glowRadius>
-        <glowColor>(80,140,255,0)</glowColor>
-      </li>
       <li Class="CompProperties_Facility">
         <statOffsets>
           <WorkTableWorkSpeedFactor>0.10</WorkTableWorkSpeedFactor>
@@ -60,7 +50,7 @@
     </comps>
     <designationCategory>Production</designationCategory>
     <researchPrerequisites>
-      <li>Electricity</li>
+      <li>MicroelectronicsBasics</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
     <placeWorkers>
