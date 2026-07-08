@@ -6,9 +6,9 @@ using Verse;
 namespace RimTweaks
 {
     [StaticConstructorOnStartup]
-    public static class RimTweaksMod
+    public static class RimTweaksStartup
     {
-        static RimTweaksMod()
+        static RimTweaksStartup()
         {
             var harmony = new Harmony("NoAd.RimTweaks");
             harmony.PatchAll();

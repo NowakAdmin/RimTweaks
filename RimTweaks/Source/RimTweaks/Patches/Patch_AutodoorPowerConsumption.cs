@@ -20,6 +20,7 @@ namespace RimTweaks.Patches
 
         static void Postfix(CompPowerTrader __instance, ref float __result)
         {
+            if (!RimTweaksModClass.Settings.enableAdvancedAutodoor) return;
             if (__instance.parent?.def != _autodoorDef) return;
             if (__result >= 0f) return;
             if (_research == null || !_research.IsFinished) return;

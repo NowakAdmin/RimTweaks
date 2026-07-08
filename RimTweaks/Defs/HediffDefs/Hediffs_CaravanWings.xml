@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>NOAD_CaravanWings</defName>
+    <label>caravan wings</label>
+    <labelNoun>a caravan wings module</labelNoun>
+    <description>A sophisticated cybernetic module surgically integrated into the torso. Carbon-fiber actuators and distributed weight-compensation systems allow the colonist to move faster and carry significantly more during travel.</description>
+    <defaultLabelColor>(0.4, 0.8, 1.0)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>0.50</MoveSpeed>
+          <MassCapacity>100</MassCapacity>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

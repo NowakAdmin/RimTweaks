@@ -17,6 +17,7 @@ namespace RimTweaks.DoorLock
         static void Postfix(Building_Door __instance, Pawn p, ref bool __result)
         {
             if (!__result) return;
+            if (!RimTweaksModClass.Settings.enableDoorLockPolicy) return;
             if (__instance.def != _autodoorDef) return;
 
             var comp = __instance.TryGetComp<CompDoorLockPolicy>();

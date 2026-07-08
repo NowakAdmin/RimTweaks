@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>NOAD_InstallCaravanWings</defName>
+    <label>install caravan wings</label>
+    <description>Surgically integrate a caravan wings module into the torso. The procedure embeds nano-actuator arrays along the ribcage and spine to enhance movement and load distribution.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing caravan wings.</jobString>
+    <workAmount>2500</workAmount>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>NOAD_CaravanWingsItem</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>NOAD_CaravanWingsItem</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>NOAD_CaravanWings</addsHediff>
+    <researchPrerequisite>NOAD_AdvancedCaravaning</researchPrerequisite>
+    <recipeUsers Inherit="False">
+      <li>Human</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>NOAD_RemoveCaravanWings</defName>
+    <label>remove caravan wings</label>
+    <description>Surgically remove a caravan wings module from the torso.</description>
+    <workerClass>Recipe_RemoveImplant</workerClass>
+    <jobString>Removing caravan wings.</jobString>
+    <workAmount>1500</workAmount>
+    <skillRequirements>
+      <Medicine>6</Medicine>
+    </skillRequirements>
+    <removesHediff>NOAD_CaravanWings</removesHediff>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <recipeUsers Inherit="False">
+      <li>Human</li>
+    </recipeUsers>
+  </RecipeDef>
+
+</Defs>

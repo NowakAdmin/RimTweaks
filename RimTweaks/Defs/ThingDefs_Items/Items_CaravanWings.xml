@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>NOAD_CaravanWingsItem</defName>
+    <label>caravan wings module</label>
+    <description>A sophisticated cybernetic system designed for surgical integration into the torso. Carbon-fiber actuators and a distributed weight-compensation network enhance movement efficiency and increase carrying capacity during travel. Must be installed by a skilled surgeon.</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItemBionic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>2</Mass>
+      <MarketValue>1500</MarketValue>
+    </statBases>
+    <costList>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Plasteel>30</Plasteel>
+      <Steel>50</Steel>
+    </costList>
+    <recipeMaker>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <researchPrerequisite>NOAD_AdvancedCaravaning</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingCategories>
+      <li>BodyPartsBionic</li>
+    </thingCategories>
+  </ThingDef>
+
+</Defs>
