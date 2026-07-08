@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Adds door lock policy (from VEF) to vanilla Autodoor.
-  Requires: Vanilla Expanded Framework (OskarPotocki.VanillaFactionsExpanded.Core)
+  Adds door lock policy comp to vanilla Autodoor.
+  No external dependencies — implemented in RimTweaks.dll.
 
-  Lock policy options (shown as right-click gizmo on the door):
-    Default                          — vanilla AI behavior
-    Everyone                         — all pawns pass freely
-    Only colonists and animals       — blocks visitors/hostiles
+  Lock policy (gizmo on selected door, click to cycle):
+    Default                             — vanilla behavior
+    Everyone                            — all pawns pass freely
+    Only colonists and animals          — blocks visitors/hostiles
     Only colonists, animals and friendlies
-    Only drafted                     — blocks everyone except drafted colonists
+    Only drafted                        — blocks everyone except drafted colonists
 -->
 <Patch>
 
-  <!--
-    Autodoor inherits thingClass from DoorBase — it has no own node to Replace.
-    We Add thingClass directly onto Autodoor, which overrides the inherited value.
-  -->
+  <!-- Add our comp to Autodoor's comps list -->
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="Autodoor"]</xpath>
+    <xpath>Defs/ThingDef[defName="Autodoor"]/comps</xpath>
     <value>
-      <thingClass>VEF.Buildings.Building_AutoDoorLockable</thingClass>
+      <li Class="RimTweaks.DoorLock.CompProperties_DoorLockPolicy"/>
     </value>
   </Operation>
 

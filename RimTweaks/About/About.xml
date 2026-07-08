@@ -11,7 +11,7 @@
     Personal compilation mod — cherry-picked features from various mods to avoid installing large mods for a single mechanic.
 
     Features:
-    - Vanilla Autodoor gets door lock policy (requires VEF): Default / Everyone / Only colonists and animals / Only colonists, animals and friendlies / Only drafted
+    - Vanilla Autodoor gets door lock policy: Default / Everyone / Only colonists and animals / Only colonists, animals and friendlies / Only drafted
     - Research "Advanced Autodoor" reduces Autodoor power consumption by 50% (requires Harmony)
   </description>
 
@@ -21,16 +21,10 @@
       <displayName>Harmony</displayName>
       <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
     </li>
-    <li>
-      <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
-      <displayName>Vanilla Expanded Framework</displayName>
-      <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
-    </li>
   </modDependencies>
 
   <loadAfter>
     <li>brrainz.harmony</li>
-    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
   </loadAfter>
 
 </ModMetaData>
