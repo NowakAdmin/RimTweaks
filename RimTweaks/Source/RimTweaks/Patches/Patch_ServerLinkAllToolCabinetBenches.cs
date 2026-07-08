@@ -6,7 +6,9 @@ using Verse;
 
 namespace RimTweaks.Patches
 {
-    [HarmonyPatch(typeof(CompAffectedByFacilities), "CanPotentiallyLinkTo_Static")]
+    // CanPotentiallyLinkTo_Static has two overloads — specify parameter types to avoid AmbiguousMatchException
+    [HarmonyPatch(typeof(CompAffectedByFacilities), "CanPotentiallyLinkTo_Static",
+        new[] { typeof(ThingDef), typeof(IntVec3), typeof(Rot4), typeof(ThingDef), typeof(IntVec3), typeof(Rot4), typeof(Map) })]
     public static class Patch_ServerLinkAllToolCabinetBenches
     {
         private static ThingDef _serverDef = null!;
@@ -33,14 +35,15 @@ namespace RimTweaks.Patches
                 }
             }
 
-            Log.Message($"[RimTweaks] ProductionServer eligible workbenches cached: {_eligibleDefs.Count}");
+            Log.Message($"[RimTweaks] ProductionServer eligible workbenches: {_eligibleDefs.Count}");
         }
 
-        static void Postfix(ThingDef facilityDef, ThingDef potentialBuildingDef, ref bool __result)
+        // Parameter names must match the actual method: facilityDef, myDef
+        static void Postfix(ThingDef facilityDef, ThingDef myDef, ref bool __result)
         {
             if (__result) return;
             if (facilityDef != _serverDef) return;
-            __result = potentialBuildingDef != null && _eligibleDefs.Contains(potentialBuildingDef);
+            __result = myDef != null && _eligibleDefs.Contains(myDef);
         }
     }
 }
