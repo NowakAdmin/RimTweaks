@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>RimTweaks by NoAd</name>
+  <packageId>NoAd.RimTweaks</packageId>
+  <author>NoAd</author>
+  <supportedVersions>
+    <li>1.5</li>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>
+    Personal compilation mod — cherry-picked features from various mods to avoid installing large mods for a single mechanic.
+    No external dependencies required unless a specific feature states otherwise.
+  </description>
+</ModMetaData>
