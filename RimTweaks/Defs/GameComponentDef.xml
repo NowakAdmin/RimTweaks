@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Registers our GameComponent so RimWorld instantiates it per game -->
+  <GameComponentDef>
+    <defName>NOAD_StartingPolicies</defName>
+    <compClass>RimTweaks.GameComponent_StartingPolicies</compClass>
+  </GameComponentDef>
+
+</Defs>
