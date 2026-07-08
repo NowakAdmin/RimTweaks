@@ -6,8 +6,10 @@
     <label>caravan wings module</label>
     <description>A sophisticated cybernetic system designed for surgical integration into the torso. Carbon-fiber actuators and a distributed weight-compensation network enhance movement efficiency and increase carrying capacity during travel. Must be installed by a skilled surgeon.</description>
     <graphicData>
-      <texPath>Things/Item/Health/HealthItemBionic</texPath>
+      <texPath>Things/Item/Health/HealthItem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(155,165,148)</color>
     </graphicData>
     <techLevel>Industrial</techLevel>
     <statBases>
